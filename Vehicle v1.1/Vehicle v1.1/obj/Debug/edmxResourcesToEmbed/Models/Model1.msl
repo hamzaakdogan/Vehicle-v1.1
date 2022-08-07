@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="AracModelStoreContainer" CdmEntityContainer="AracEntities1">
+    <EntitySetMapping Name="Araclars">
+      <EntityTypeMapping TypeName="AracModel.Araclar">
+        <MappingFragment StoreEntitySet="Araclar">
+          <ScalarProperty Name="AracTipiID" ColumnName="AracTipiID" />
+          <ScalarProperty Name="AracTipi" ColumnName="AracTipi" />
+          <ScalarProperty Name="AracMarka" ColumnName="AracMarka" />
+          <ScalarProperty Name="AracModel" ColumnName="AracModel" />
+          <ScalarProperty Name="AracPlaka" ColumnName="AracPlaka" />
+          <ScalarProperty Name="AracModelYil" ColumnName="AracModelYil" />
+          <ScalarProperty Name="AracRenk" ColumnName="AracRenk" />
+          <ScalarProperty Name="Kapasite_KG" ColumnName="Kapasite_KG" />
+          <ScalarProperty Name="Kapasite_m3" ColumnName="Kapasite_m3" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

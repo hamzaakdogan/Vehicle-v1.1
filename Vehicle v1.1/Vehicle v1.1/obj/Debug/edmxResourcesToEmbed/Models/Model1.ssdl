@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="AracModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Araclar">
+    <Key>
+      <PropertyRef Name="AracTipiID" />
+    </Key>
+    <Property Name="AracTipiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AracTipi" Type="nvarchar" MaxLength="10" />
+    <Property Name="AracMarka" Type="nvarchar" MaxLength="30" />
+    <Property Name="AracModel" Type="nvarchar" MaxLength="30" />
+    <Property Name="AracPlaka" Type="nvarchar" MaxLength="20" />
+    <Property Name="AracModelYil" Type="int" />
+    <Property Name="AracRenk" Type="nvarchar" MaxLength="20" />
+    <Property Name="Kapasite_KG" Type="nvarchar" MaxLength="20" />
+    <Property Name="Kapasite_m3" Type="nvarchar" MaxLength="20" />
+  </EntityType>
+  <EntityContainer Name="AracModelStoreContainer">
+    <EntitySet Name="Araclar" EntityType="Self.Araclar" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

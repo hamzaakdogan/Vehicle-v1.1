@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Vehicle_v1._1.Models.Araclar>
+
+@{
+    ViewBag.Title = "Araçlarımız";
+}
+<p>
+</p>
+
+<font color="red">
+    <h2>Araçlar Listesi</h2>
+</font>
+
+<p>
+</p>
+
+<p>
+    <h3> @Html.ActionLink("Araç Ekle", "Create")</h3>
+</p>
+
+@using (Html.BeginForm())
+{
+    <p>
+
+        <b>Araç Plaka veya Araç Markası Giriniz:</b> @Html.TextBox("SearchString")
+        <input type="submit" value="Arama" />
+
+    </p>
+}
+<p>
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.AracTipi)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AracMarka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AracModel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AracPlaka)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AracModelYil)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AracRenk)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kapasite_KG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Kapasite_m3)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AracTipi)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AracMarka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AracModel)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AracPlaka)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AracModelYil)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AracRenk)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kapasite_KG)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kapasite_m3)
+            </td>
+            <td>
+                @Html.ActionLink("Düzenle", "Edit", new { id = item.AracTipiID }, new { @class = "btn btn-success" }) |
+                @Html.ActionLink("Detaylar", "Details", new { id = item.AracTipiID }, new { @class = "btn btn-primary" }) |
+                @Html.ActionLink("Sil", "Delete", new { id = item.AracTipiID }, new { @class = "btn btn-danger" })
+            </td>
+        </tr>
+    }
+
+</table>

@@ -1,0 +1,82 @@
+﻿@model Vehicle_v1._1.Models.Araclar
+
+@{
+    ViewBag.Title = "Detaylar";
+}
+<font color="red">
+    <h2>Araç Detayları</h2>
+</font>
+<div>
+ 
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AracTipi)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AracTipi)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AracMarka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AracMarka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AracModel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AracModel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AracPlaka)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AracPlaka)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AracModelYil)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AracModelYil)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AracRenk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AracRenk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kapasite_KG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kapasite_KG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kapasite_m3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kapasite_m3)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Düzenle", "Edit", new { id = Model.AracTipiID }) |
+    @Html.ActionLink("Araçlar Listesine Dön", "Index")
+</p>

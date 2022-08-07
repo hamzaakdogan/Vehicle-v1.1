@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="AracModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Araclar">
+          <Key>
+            <PropertyRef Name="AracTipiID" />
+          </Key>
+          <Property Name="AracTipiID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="AracTipi" Type="nvarchar" MaxLength="10" />
+          <Property Name="AracMarka" Type="nvarchar" MaxLength="30" />
+          <Property Name="AracModel" Type="nvarchar" MaxLength="30" />
+          <Property Name="AracPlaka" Type="nvarchar" MaxLength="20" />
+          <Property Name="AracModelYil" Type="int" />
+          <Property Name="AracRenk" Type="nvarchar" MaxLength="20" />
+          <Property Name="Kapasite_KG" Type="nvarchar" MaxLength="20" />
+          <Property Name="Kapasite_m3" Type="nvarchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="AracModelStoreContainer">
+          <EntitySet Name="Araclar" EntityType="Self.Araclar" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="AracModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Araclar">
+          <Key>
+            <PropertyRef Name="AracTipiID" />
+          </Key>
+          <Property Name="AracTipiID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="AracTipi" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="AracMarka" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AracModel" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="AracPlaka" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="AracModelYil" Type="Int32" />
+          <Property Name="AracRenk" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Kapasite_KG" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="Kapasite_m3" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="AracEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Araclars" EntityType="Self.Araclar" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="AracModelStoreContainer" CdmEntityContainer="AracEntities1">
+          <EntitySetMapping Name="Araclars">
+            <EntityTypeMapping TypeName="AracModel.Araclar">
+              <MappingFragment StoreEntitySet="Araclar">
+                <ScalarProperty Name="AracTipiID" ColumnName="AracTipiID" />
+                <ScalarProperty Name="AracTipi" ColumnName="AracTipi" />
+                <ScalarProperty Name="AracMarka" ColumnName="AracMarka" />
+                <ScalarProperty Name="AracModel" ColumnName="AracModel" />
+                <ScalarProperty Name="AracPlaka" ColumnName="AracPlaka" />
+                <ScalarProperty Name="AracModelYil" ColumnName="AracModelYil" />
+                <ScalarProperty Name="AracRenk" ColumnName="AracRenk" />
+                <ScalarProperty Name="Kapasite_KG" ColumnName="Kapasite_KG" />
+                <ScalarProperty Name="Kapasite_m3" ColumnName="Kapasite_m3" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
